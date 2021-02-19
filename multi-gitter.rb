@@ -5,29 +5,29 @@
 class MultiGitter < Formula
   desc "Update multiple repositories in bulk"
   homepage "https://github.com/lindell/multi-gitter"
-  version "0.20.2"
+  version "0.20.3"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/lindell/multi-gitter/releases/download/v0.20.2/multi-gitter_0.20.2_Darwin_x86_64.tar.gz"
-    sha256 "53a201d24f20eb8c321d70f19d7ab4c99429691aeb275f553dff3353ab3709fe"
+    url "https://github.com/lindell/multi-gitter/releases/download/v0.20.3/multi-gitter_0.20.3_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "a28b7c3c5a3d2a04781b08a861a1cc4f4c76da5dead584a7a57592f6bb361414"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/lindell/multi-gitter/releases/download/v0.20.2/multi-gitter_0.20.2_Darwin_ARM64.tar.gz"
-    sha256 "3b0daf8958ece56cff5d5fe6468a27a24ac971be3e239aa468032be927163e6d"
+    url "https://github.com/lindell/multi-gitter/releases/download/v0.20.3/multi-gitter_0.20.3_Darwin_ARM64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "c70a121dc611df15c0c1b3d51d905322fae35fb3ea8067eac2fedd17edfba10c"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/lindell/multi-gitter/releases/download/v0.20.2/multi-gitter_0.20.2_Linux_x86_64.tar.gz"
-    sha256 "6dffc5996c41446f464ecd677f5b4ad1f34911bff091dc782a112dfaa7aa4688"
+    url "https://github.com/lindell/multi-gitter/releases/download/v0.20.3/multi-gitter_0.20.3_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "9d205aa60f0de73f9b0f67638bd6543c7466622788313e6d6ace9b4a28e61edb"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/lindell/multi-gitter/releases/download/v0.20.2/multi-gitter_0.20.2_Linux_ARMv6.tar.gz"
-    sha256 "553f4bc5b89a3c8c979b2a1588a27c6e0c819c198891f1442ea44c6bd0c191d3"
+    url "https://github.com/lindell/multi-gitter/releases/download/v0.20.3/multi-gitter_0.20.3_Linux_ARMv6.tar.gz", :using => CurlDownloadStrategy
+    sha256 "0583e3f8ed3729746e055ee45c5a66354fad95fa07f16c18ed781a42ce505311"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/lindell/multi-gitter/releases/download/v0.20.2/multi-gitter_0.20.2_Linux_ARM64.tar.gz"
-    sha256 "a0e202636850e97436802a5236c9bef470388a20d6afac09a3f2582571468c83"
+    url "https://github.com/lindell/multi-gitter/releases/download/v0.20.3/multi-gitter_0.20.3_Linux_ARM64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "bdc451c08e609306b7ce5fcf9c85029276bde75218fda5bcbd01066139518c95"
   end
 
   def install
@@ -35,6 +35,6 @@ class MultiGitter < Formula
   end
 
   test do
-    system "#{bin}/program version"
+    system "#{bin}/multi-gitter version"
   end
 end
