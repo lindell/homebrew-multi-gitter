@@ -5,33 +5,36 @@
 class MultiGitter < Formula
   desc "Update multiple repositories in bulk"
   homepage "https://github.com/lindell/multi-gitter"
-  version "0.20.5"
+  version "0.21.1"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/lindell/multi-gitter/releases/download/v0.20.5/multi-gitter_0.20.5_Darwin_x86_64.tar.gz"
-    sha256 "c1f70acddd692aaf3546d974e7dc06e4f6fe8ff66d89ae122a71b91503a40157"
+    url "https://github.com/lindell/multi-gitter/releases/download/v0.21.1/multi-gitter_0.21.1_Darwin_x86_64.tar.gz"
+    sha256 "99e6f39ea0fae457b5c795f975519de1c51fc99bdf039ad0cc5b58c14c8784ec"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/lindell/multi-gitter/releases/download/v0.20.5/multi-gitter_0.20.5_Darwin_ARM64.tar.gz"
-    sha256 "fdd1316789d73cc9814c14e608c5ab29c729d092a7af7a41895d4ea3b524d303"
+    url "https://github.com/lindell/multi-gitter/releases/download/v0.21.1/multi-gitter_0.21.1_Darwin_ARM64.tar.gz"
+    sha256 "a42b1063b3adb3c9a03bf6dd31047274e333e5b03516a134f9441975a3dee4a5"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/lindell/multi-gitter/releases/download/v0.20.5/multi-gitter_0.20.5_Linux_x86_64.tar.gz"
-    sha256 "cc74bfd0c5da24957964376c6235824096087d174be51adf33419ffc2f2037ba"
+    url "https://github.com/lindell/multi-gitter/releases/download/v0.21.1/multi-gitter_0.21.1_Linux_x86_64.tar.gz"
+    sha256 "9ee1aaeb0a415f0cf9d177deec8350edc680c2c57dd35626882601961313e3a1"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/lindell/multi-gitter/releases/download/v0.20.5/multi-gitter_0.20.5_Linux_ARMv6.tar.gz"
-    sha256 "27b035d1b9a01b17fc8a256f537885e360998b57f0a62fa9c42093e3991faee3"
+    url "https://github.com/lindell/multi-gitter/releases/download/v0.21.1/multi-gitter_0.21.1_Linux_ARMv6.tar.gz"
+    sha256 "ad2fa9f0b187e935722f38d3768a3d99998fc62a8bc14c63f11c6c993e2e5635"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/lindell/multi-gitter/releases/download/v0.20.5/multi-gitter_0.20.5_Linux_ARM64.tar.gz"
-    sha256 "188b40ef9002ad650287b49515e2add3f124f38360e7b0d2a8d313f8c5a5be2c"
+    url "https://github.com/lindell/multi-gitter/releases/download/v0.21.1/multi-gitter_0.21.1_Linux_ARM64.tar.gz"
+    sha256 "aab09ce257744a376223d86774888aec1dd39b007ab80f0c8bda5163a14118e1"
   end
 
   def install
     bin.install "multi-gitter"
+    bash_completion.install "completions/multi-gitter.bash" => "multi-gitter"
+    zsh_completion.install "completions/multi-gitter.zsh" => "_multi-gitter"
+    fish_completion.install "completions/multi-gitter.fish"
   end
 
   test do
