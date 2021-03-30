@@ -38,6 +38,6 @@ class MultiGitter < Formula
   end
 
   test do
-    system "#{bin}/multi-gitter version"
+    system "#{bin}/multi-gitter", "version"
   end
 end
