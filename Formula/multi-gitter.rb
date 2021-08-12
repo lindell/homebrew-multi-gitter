@@ -5,33 +5,33 @@
 class MultiGitter < Formula
   desc "Update multiple repositories in bulk"
   homepage "https://github.com/lindell/multi-gitter"
-  version "0.31.0"
+  version "0.31.1"
   license "Apache-2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/lindell/multi-gitter/releases/download/v0.31.0/multi-gitter_0.31.0_Darwin_x86_64.tar.gz"
-      sha256 "be51f19b3cbbaa77716412323d1f252e64d5a44d5ca83a67c206f46ca62f783f"
+      url "https://github.com/lindell/multi-gitter/releases/download/v0.31.1/multi-gitter_0.31.1_Darwin_x86_64.tar.gz"
+      sha256 "547d423701f6187fad39337a3341cdd99073814eb23e5598db34ff12feae0da7"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/lindell/multi-gitter/releases/download/v0.31.0/multi-gitter_0.31.0_Darwin_ARM64.tar.gz"
-      sha256 "88cf1cd45a166dce3220983e741b2409a8a12acbd7ae5de6d73a68f2d438a7ce"
+      url "https://github.com/lindell/multi-gitter/releases/download/v0.31.1/multi-gitter_0.31.1_Darwin_ARM64.tar.gz"
+      sha256 "bdb9c5a557b65814d4f6c897703ae4ceb29e7371f887668e116a979f2476b079"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/lindell/multi-gitter/releases/download/v0.31.0/multi-gitter_0.31.0_Linux_x86_64.tar.gz"
-      sha256 "bae74048c934cefc176ad5f4d10913df74d10dc77b5ca4c2b944d5e6c06d73d6"
+      url "https://github.com/lindell/multi-gitter/releases/download/v0.31.1/multi-gitter_0.31.1_Linux_x86_64.tar.gz"
+      sha256 "e33a0cc78402ec776b679813503298b4a0ef9daf0fa9947fc8dd6df53a513047"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/lindell/multi-gitter/releases/download/v0.31.0/multi-gitter_0.31.0_Linux_ARMv6.tar.gz"
-      sha256 "9c3d4d699bc1c835f74780dd6641ace258de74b140f25b3c860674948276d008"
+      url "https://github.com/lindell/multi-gitter/releases/download/v0.31.1/multi-gitter_0.31.1_Linux_ARMv6.tar.gz"
+      sha256 "b2caa0e70722fca6257ee0642277b9e1cf5908d7d69e5bb5f15f951cf47bdffd"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lindell/multi-gitter/releases/download/v0.31.0/multi-gitter_0.31.0_Linux_ARM64.tar.gz"
-      sha256 "4240c3dc13db6c86634152916b1cb1040ec4c2f663abc646d08d34a68855cbbc"
+      url "https://github.com/lindell/multi-gitter/releases/download/v0.31.1/multi-gitter_0.31.1_Linux_ARM64.tar.gz"
+      sha256 "5f4ac184e2e6efa4f475cec2a8dd43c93d51b36b14873be1f2f2f0f3d58b502b"
     end
   end
 
