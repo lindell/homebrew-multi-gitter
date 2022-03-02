@@ -5,13 +5,13 @@
 class MultiGitter < Formula
   desc "Update multiple repositories in bulk"
   homepage "https://github.com/lindell/multi-gitter"
-  version "0.40.0"
+  version "0.40.1"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/lindell/multi-gitter/releases/download/v0.40.0/multi-gitter_0.40.0_Darwin_ARM64.tar.gz"
-      sha256 "515c29f70062ab7e60d976f673b631792e6485243ec7fad85b64789f58950694"
+    if Hardware::CPU.intel?
+      url "https://github.com/lindell/multi-gitter/releases/download/v0.40.1/multi-gitter_0.40.1_Darwin_x86_64.tar.gz"
+      sha256 "3762511f5c36902f912144611094fb1b4aefabb7c853cd5b93cffa46f11ae736"
 
       def install
         bin.install "multi-gitter"
@@ -20,9 +20,9 @@ class MultiGitter < Formula
         fish_completion.install "completions/multi-gitter.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/lindell/multi-gitter/releases/download/v0.40.0/multi-gitter_0.40.0_Darwin_x86_64.tar.gz"
-      sha256 "52f9e085b8c72039a04c379b872ed50064e8ea458746ef7eb6eaf6a2f328e4b2"
+    if Hardware::CPU.arm?
+      url "https://github.com/lindell/multi-gitter/releases/download/v0.40.1/multi-gitter_0.40.1_Darwin_ARM64.tar.gz"
+      sha256 "ba8723699232bbfe28ebf673ea56692631716f2efcd528adaa89a698f321678a"
 
       def install
         bin.install "multi-gitter"
@@ -34,20 +34,9 @@ class MultiGitter < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/lindell/multi-gitter/releases/download/v0.40.0/multi-gitter_0.40.0_Linux_x86_64.tar.gz"
-      sha256 "ea8d1523ac1c7328543fb7be17a44ec32169c22cb90152908d46a1559a5a3e8c"
-
-      def install
-        bin.install "multi-gitter"
-        bash_completion.install "completions/multi-gitter.bash" => "multi-gitter"
-        zsh_completion.install "completions/multi-gitter.zsh" => "_multi-gitter"
-        fish_completion.install "completions/multi-gitter.fish"
-      end
-    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/lindell/multi-gitter/releases/download/v0.40.0/multi-gitter_0.40.0_Linux_ARMv6.tar.gz"
-      sha256 "b5975372b17ca18120552a9160ec018591e376ca56ee07bef16c7d0317b5002b"
+      url "https://github.com/lindell/multi-gitter/releases/download/v0.40.1/multi-gitter_0.40.1_Linux_ARMv6.tar.gz"
+      sha256 "49dd7db1c5758cb44e8436ef7b9dcc53f25de1fe400f2ca769f2f2f1b4bd7a50"
 
       def install
         bin.install "multi-gitter"
@@ -57,8 +46,19 @@ class MultiGitter < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lindell/multi-gitter/releases/download/v0.40.0/multi-gitter_0.40.0_Linux_ARM64.tar.gz"
-      sha256 "aa0c560f83599e8d59777573af56aa43d702be578d633e098863ace364a76a82"
+      url "https://github.com/lindell/multi-gitter/releases/download/v0.40.1/multi-gitter_0.40.1_Linux_ARM64.tar.gz"
+      sha256 "bf3ff6e0063d0368d6cc1008d99158d9c1e134fd22e45d9c5de22dad05394376"
+
+      def install
+        bin.install "multi-gitter"
+        bash_completion.install "completions/multi-gitter.bash" => "multi-gitter"
+        zsh_completion.install "completions/multi-gitter.zsh" => "_multi-gitter"
+        fish_completion.install "completions/multi-gitter.fish"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/lindell/multi-gitter/releases/download/v0.40.1/multi-gitter_0.40.1_Linux_x86_64.tar.gz"
+      sha256 "0ce039b43f522122b0e39bee3b4ecada0f60600f3af8827028d40fc5ccb72da6"
 
       def install
         bin.install "multi-gitter"
