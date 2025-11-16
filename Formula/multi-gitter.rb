@@ -8,7 +8,7 @@ class MultiGitter < Formula
   version "0.59.0"
   license "Apache-2.0"
 
-  disable! date: "2025-11-16", because: "the cask should be used now instead", replacement_cask: "multi-gitter"
+  disable! date: "2025-11-16", because: "the cask should be used now instead", replacement_cask: "lindell/multi-gitter/multi-gitter"
 
   on_macos do
     if Hardware::CPU.intel?
