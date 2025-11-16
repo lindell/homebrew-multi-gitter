@@ -8,6 +8,8 @@ class MultiGitter < Formula
   version "0.59.0"
   license "Apache-2.0"
 
+  disable! date: "2025-11-16", because: "the cask should be used now instead", replacement_cask: "multi-gitter"
+
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/lindell/multi-gitter/releases/download/v0.59.0/multi-gitter_0.59.0_Darwin_x86_64.tar.gz"
