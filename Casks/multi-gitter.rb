@@ -3,7 +3,7 @@ cask "multi-gitter" do
   name "multi-gitter"
   desc "Update multiple repositories in bulk"
   homepage "https://github.com/lindell/multi-gitter"
-  version "0.61.0"
+  version "0.62.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -18,12 +18,12 @@ cask "multi-gitter" do
     on_intel do
       url "https://github.com/lindell/multi-gitter/releases/download/v#{version}/multi-gitter_#{version}_Darwin_x86_64.tar.gz",
         verified: "github.com/lindell/multi-gitter"
-      sha256 "8712e54d0e351cb85d21433487ae5dcc7de5ac8552a87e3ea472290f7bdb0075"
+      sha256 "92cefd08fc5ac3d80def58285eb097ac7109fa058025e516104dd62c8b3d4679"
     end
     on_arm do
       url "https://github.com/lindell/multi-gitter/releases/download/v#{version}/multi-gitter_#{version}_Darwin_ARM64.tar.gz",
         verified: "github.com/lindell/multi-gitter"
-      sha256 "e46f069ca37ba2f0263ded9574338397809a3ee1b28b59c03ed52e86ea2f3c23"
+      sha256 "f0a71b48ae6f8925b063700b0d25ed1f85584f339c6d70b1b1e73a35ed2730b1"
     end
   end
 
@@ -31,12 +31,12 @@ cask "multi-gitter" do
     on_intel do
       url "https://github.com/lindell/multi-gitter/releases/download/v#{version}/multi-gitter_#{version}_Linux_x86_64.tar.gz",
         verified: "github.com/lindell/multi-gitter"
-      sha256 "b579ed6c86b313e1c02f662356b5ea24408e86d11987dbdb0d6fc5fa6282f92f"
+      sha256 "4394a93fc39daaa5a89af5a202251b3731fb6ed496bd12ebc46016b54d96d05f"
     end
     on_arm do
       url "https://github.com/lindell/multi-gitter/releases/download/v#{version}/multi-gitter_#{version}_Linux_ARM64.tar.gz",
         verified: "github.com/lindell/multi-gitter"
-      sha256 "652c4baa0f43b0f8b93b771e6f320fc9b6cb2bbc43b132ecb807a7fc1406e941"
+      sha256 "497fdc7afe3a3cf4b37b9152cd675177cd2d8c86a7ad9b1b13e79fb8d959afd5"
     end
   end
 
